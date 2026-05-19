@@ -1,0 +1,147 @@
+# Disease Detection & Treatment Coverage
+
+**Total Detectable Pests/Diseases:** 135
+
+## Summary
+- **With Medicine/Treatment Info:** 30
+- **Without Medicine Info:** 105
+
+## 1. Pests/Diseases WITHOUT Medicine Info
+These classes can be detected but have no treatment advice in the system.
+- Adristyrannus
+- Aleurocanthus_spiniferus
+- Ampelophaga
+- Aphis_citricola_Vander_Goot
+- Apolygus_lucorum
+- Background_without_leaves
+- Bactrocera_tsuneonis
+- Beet_spot_flies
+- Brevipoalpus_lewisi_McGregor
+- Ceroplastes_rubens
+- Cherry_Powdery_mildew
+- Cherry_healthy
+- Chlumetia_transversa
+- Cicadella_viridis
+- Colomerus_vitis
+- Corn_Cercospora_leaf_spot_Gray_leaf_spot
+- Corn_Common_rust
+- Corn_Northern_Leaf_Blight
+- Corn_healthy
+- Dacus_dorsalisHendel
+- Dasineura_sp
+- Deporaus_marginatus_Pascoe
+- Erythroneura_apicalis
+- Icerya_purchasi_Maskell
+- Lawana_imitata_Melichar
+- Locustoidea
+- Lycorma_delicatula
+- Mango_flat_beak_leafhopper
+- Miridae
+- Nipaecoccus_vastalor
+- Papilio_xuthus
+- Parlatoria_zizyphus_Lucus
+- Phyllocnistis_citrella_Stainton
+- Phyllocoptes_oleiverus_ashmead
+- Pieris_canidia
+- Polyphagotars_onemus_latus
+- Potosiabre_vitarsis
+- Prodenia_litura
+- Pseudococcus_comstocki_Kuwana
+- Rhytidodera_bowrinii_white
+- Rice_Stemfly
+- Salurnis_marginella_Guerr
+- Scirtothrips_dorsalis_Hood
+- Sternochetus_frigidus
+- Tetradacus_c_Bactrocera_minax
+- Thrips
+- Tomato_Spider_mites_Two_spotted_spider_mite
+- Tomato_Tomato_YellowLeaf_Curl_Virus
+- Toxoptera_aurantii
+- Toxoptera_citricidus
+- Trialeurodes_vaporariorum
+- Unaspis_yanonensis
+- Xylotrechus
+- alfalfa_plant_bug
+- alfalfa_seed_chalcid
+- alfalfa_weevil
+- aphids
+- army_worm
+- asiatic_rice_borer
+- beet_army_worm
+- beet_fly
+- beet_weevil
+- bird_cherry-oataphid
+- black_cutworm
+- blister_beetle
+- brown_plant_hopper
+- cabbage_army_worm
+- cerodonta_denticornis
+- corn_borer
+- english_grain_aphid
+- flax_budworm
+- flea_beetle
+- grain_spreader_thrips
+- green_bug
+- grub
+- large_cutworm
+- legume_blister_beetle
+- longlegged_spider_mite
+- lytta_polita
+- meadow_moth
+- mole_cricket
+- odontothrips_loti
+- paddy_stem_maggot
+- parathrene_regalis
+- peach_borer
+- penthaleus_major
+- red_spider
+- rice_gall_midge
+- rice_leaf_caterpillar
+- rice_leaf_roller
+- rice_leafhopper
+- rice_shell_pest
+- rice_water_weevil
+- sericaorient_alismots_chulsky
+- small_brown_plant_hopper
+- tarnished_plant_bug
+- therioaphis_maculata_Buckton
+- wheat_blossom_midge
+- wheat_phloeothrips
+- wheat_sawfly
+- white_backed_plant_hopper
+- white_margined_moth
+- wireworm
+- yellow_cutworm
+- yellow_rice_borer
+
+## 2. Pests/Diseases WITH Medicine Info
+- Apple_Apple_scab (Mapped to: Apple Scab)
+- Apple_Black_rot (Mapped to: Black Rot)
+- Apple_Cedar_apple_rust (Mapped to: Cedar Apple Rust)
+- Apple_healthy (Mapped to: Healthy Apple)
+- Blueberry_healthy (Mapped to: Healthy Blueberry)
+- Grape_Black_rot (Mapped to: Black Rot)
+- Grape_Esca_(Black_Measles) (Mapped to: Esca (Black Measles))
+- Grape_Leaf_blight_(Isariopsis_Leaf_Spot) (Mapped to: Isariopsis Leaf Spot)
+- Grape_healthy (Mapped to: Healthy Grape)
+- Orange_Haunglongbing_(Citrus_greening) (Mapped to: Citrus Greening (HLB))
+- Peach_Bacterial_spot (Mapped to: Bacterial Spot)
+- Peach_healthy (Mapped to: Healthy Peach)
+- Pepper_bell_Bacterial_spot (Mapped to: Bacterial Spot)
+- Pepper_bell_healthy (Mapped to: Healthy Pepper)
+- Potato_Early_blight (Mapped to: Early Blight)
+- Potato_Late_blight (Mapped to: Late Blight)
+- Potato_healthy (Mapped to: Healthy Potato)
+- Raspberry_healthy (Mapped to: Healthy Raspberry)
+- Soybean_healthy (Mapped to: Healthy Soybean)
+- Squash_Powdery_mildew (Mapped to: Powdery Mildew)
+- Strawberry_Leaf_scorch (Mapped to: Leaf Scorch)
+- Strawberry_healthy (Mapped to: Healthy Strawberry)
+- Tomato_Bacterial_spot (Mapped to: Bacterial Spot)
+- Tomato_Early_blight (Mapped to: Early Blight)
+- Tomato_Late_blight (Mapped to: Late Blight)
+- Tomato_Leaf_Mold (Mapped to: Leaf Mold)
+- Tomato_Septoria_leaf_spot (Mapped to: Septoria Leaf Spot)
+- Tomato_Target_Spot (Mapped to: Target Spot)
+- Tomato_Tomato_mosaic_virus (Mapped to: Mosaic Virus)
+- Tomato_healthy (Mapped to: Healthy Tomato)
