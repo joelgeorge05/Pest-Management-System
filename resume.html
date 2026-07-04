@@ -3,18 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joel George - Resume</title>
-    <!-- Premium Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Joel George - Resume (ATS Friendly)</title>
+    <!-- Standard Clean Web-Safe Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e40af;
-            --primary-light: #3b82f6;
-            --primary-dark: #1e3a8a;
-            --text-dark: #1f2937;
-            --text-muted: #4b5563;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
+            --primary: #1e3a8a;
+            --text-color: #333333;
+            --text-light: #555555;
+            --border-color: #cccccc;
         }
 
         * {
@@ -24,607 +21,293 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-dark);
-            background-color: #f1f5f9;
-            line-height: 1.5;
+            font-family: 'Inter', Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #f3f4f6;
+            line-height: 1.6;
             padding: 40px 20px;
             display: flex;
             justify-content: center;
         }
 
         .resume-container {
-            background: #ffffff;
-            width: 100%;
-            max-width: 850px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header Styling */
-        header {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
-            color: #ffffff;
-            padding: 35px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--primary-light);
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 25px;
-        }
-
-        .profile-img-container {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.8);
-            overflow: hidden;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .profile-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .profile-placeholder {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: rgba(255, 255, 255, 0.9);
-            letter-spacing: 1px;
-        }
-
-        .name-title h1 {
-            font-size: 2.2rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 4px;
-            text-transform: uppercase;
-        }
-
-        .name-title p {
-            font-size: 1.1rem;
-            font-weight: 500;
-            color: rgba(255, 255, 255, 0.9);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .contact-info {
-            text-align: right;
-            font-size: 0.9rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.9);
-        }
-
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Resume Body Layout */
-        .resume-body {
-            display: flex;
-            flex-grow: 1;
-        }
-
-        /* Columns */
-        .left-col {
-            width: 35%;
-            background-color: var(--bg-light);
-            border-right: 1px solid var(--border-color);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .right-col {
-            width: 65%;
-            padding: 30px 40px;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        /* Section Headings */
-        .section-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            border-bottom: 2px solid var(--primary-light);
-            padding-bottom: 6px;
-        }
-
-        /* List Items Styling */
-        ul {
-            list-style: none;
-        }
-
-        .left-col ul li {
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .left-col ul li::before {
-            content: "•";
-            color: var(--primary-light);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -15px;
-        }
-
-        /* Technical & Professional Skills grids */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-        }
-
-        .skill-item {
-            font-size: 0.9rem;
-            color: var(--text-dark);
-            font-weight: 500;
-            background: #ffffff;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        .skill-item-header {
-            font-weight: 600;
-            color: var(--primary-dark);
-            margin-bottom: 3px;
-        }
-
-        .skill-item-desc {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
-
-        /* Languages section */
-        .language-item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.9rem;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-muted);
-        }
-
-        .language-level {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.8rem;
-        }
-
-        /* Right column details */
-        .profile-summary-text {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            text-align: justify;
-        }
-
-        /* Education block */
-        .education-timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .edu-item {
-            position: relative;
-            padding-left: 20px;
-            border-left: 2px solid var(--border-color);
-        }
-
-        .edu-item::before {
-            content: '';
-            position: absolute;
-            left: -6px;
-            top: 6px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: var(--primary-light);
-            border: 2px solid #ffffff;
-        }
-
-        .edu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 4px;
-        }
-
-        .edu-degree {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .edu-year {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary);
-            background-color: rgba(59, 130, 246, 0.1);
-            padding: 2px 8px;
-            border-radius: 12px;
-        }
-
-        .edu-school {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 500;
-        }
-
-        .edu-grades {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--primary-dark);
-            margin-top: 2px;
-        }
-
-        /* Projects Section */
-        .project-item {
             background-color: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 16px 20px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-        }
-
-        .project-title {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 6px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .project-tech {
-            font-size: 0.75rem;
-            font-weight: 600;
-            background-color: rgba(30, 64, 175, 0.1);
-            color: var(--primary-dark);
-            padding: 2px 8px;
+            width: 100%;
+            max-width: 800px;
+            padding: 45px 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             border-radius: 4px;
         }
 
-        .project-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
+        /* ATS rule: Clear linear structure */
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
         }
 
-        .project-bullets {
-            list-style: initial;
-            margin-left: 20px;
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px 18px;
+            font-size: 0.95rem;
+            color: var(--text-light);
         }
 
-        .project-bullets li {
-            font-size: 0.85rem;
-            color: var(--text-muted);
+        .contact-details a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Section layout */
+        section {
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            text-align: justify;
+        }
+
+        /* Lists */
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        li {
+            font-size: 0.95rem;
+            color: var(--text-color);
+            margin-bottom: 6px;
+        }
+
+        /* Skills groups */
+        .skills-section {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .skills-row {
+            font-size: 0.95rem;
+        }
+
+        .skills-category {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Timeline Items (Education & Projects) */
+        .timeline-item {
+            margin-bottom: 18px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 3px;
+        }
+
+        .timeline-title {
+            color: var(--primary);
+        }
+
+        .timeline-date {
+            color: var(--text-light);
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .timeline-sub {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .project-details {
+            margin-left: 20px;
+            margin-top: 6px;
+        }
+
+        .project-details li {
+            font-size: 0.9rem;
+            color: var(--text-color);
             margin-bottom: 4px;
         }
 
-        /* Achievements styling for right column */
-        .achievement-list {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        /* Achievements list */
+        .achievements-list li {
+            margin-bottom: 8px;
         }
 
-        .achievement-item {
-            display: flex;
-            gap: 12px;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.4;
-        }
-
-        .achievement-icon {
-            color: var(--primary-light);
-            font-weight: 800;
-        }
-
-        /* Print Layout Adjustments */
+        /* Print formatting */
         @media print {
             body {
                 background-color: #ffffff;
                 padding: 0;
-                display: block;
             }
 
             .resume-container {
                 box-shadow: none;
-                border-radius: 0;
+                padding: 0;
                 width: 100%;
                 max-width: 100%;
             }
 
-            .left-col {
-                background-color: #f8fafc !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            header {
-                background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%) !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .edu-year {
-                background-color: rgba(59, 130, 246, 0.1) !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            .project-tech {
-                background-color: rgba(30, 64, 175, 0.1) !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-
-            /* Adjust margin for A4 size page boundary */
             @page {
                 size: A4;
-                margin: 0.4cm 0.4cm 0.4cm 0.4cm;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .resume-body {
-                flex-direction: column;
-            }
-            .left-col, .right-col {
-                width: 100%;
-            }
-            header {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            .header-left {
-                flex-direction: column;
-            }
-            .contact-info {
-                text-align: center;
-            }
-            .contact-info p {
-                justify-content: center;
+                margin: 1.5cm;
             }
         }
     </style>
 </head>
 <body>
     <div class="resume-container">
-        <!-- Resume Header -->
+        <!-- Header Section -->
         <header>
-            <div class="header-left">
-                <div class="profile-img-container">
-                    <!-- Automatically loads profile.jpg if present, otherwise displays initials -->
-                    <img src="profile.jpg" alt="Joel George" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                    <span class="profile-placeholder" style="display: none;">JG</span>
-                </div>
-                <div class="name-title">
-                    <h1>Joel George</h1>
-                    <p>B.Tech Computer Science & Engineering Student</p>
-                </div>
-            </div>
-            <div class="contact-info">
-                <p>
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                    <a href="mailto:joelveliyath05@gmail.com">joelveliyath05@gmail.com</a>
-                </p>
-                <p>
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    <a href="tel:+919188492986">+91 9188492986</a>
-                </p>
-                <p>
-                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-                    <span>Kaliyar P.O., Vannappuram, Kerala</span>
-                </p>
+            <h1>Joel George</h1>
+            <div class="contact-details">
+                <span>Phone: +91 9188492986</span>
+                <span>•</span>
+                <span>Email: <a href="mailto:joelveliyath05@gmail.com">joelveliyath05@gmail.com</a></span>
+                <span>•</span>
+                <span>Address: Kaliyar P.O., Vannappuram, Kerala</span>
+                <span>•</span>
+                <span>GitHub: <a href="https://github.com/joelgeorge05" target="_blank">github.com/joelgeorge05</a></span>
             </div>
         </header>
 
-        <!-- Resume Body -->
-        <div class="resume-body">
-            <!-- Left Column: Skills, Languages, NCC -->
-            <div class="left-col">
-                <!-- Technical Skills -->
-                <div>
-                    <div class="section-title">Technical Skills</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-item-header">Languages & Concepts</div>
-                            <div class="skill-item-desc">C, C++, Python, HTML, Data Structures</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-item-header">Design & Tools</div>
-                            <div class="skill-item-desc">UI/UX (Figma), Canva, Adobe Express</div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-item-header">Web Frameworks</div>
-                            <div class="skill-item-desc">React, Tailwind CSS, Flask REST API</div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Profile Summary Section -->
+        <section>
+            <h2>Profile Summary</h2>
+            <p>
+                Motivated and adaptable B.Tech Computer Science and Engineering student at APJ Abdul Kalam Technological University with a strong academic foundation and a keen interest in technology. Possesses programming proficiency in C, C++, and Python, alongside an understanding of fundamental computing concepts, data structures, and UI/UX design. Recognized for leadership, communication, and teamwork skills as an active NCC cadet. Eager to contribute to software development, engineering, and web development roles in dynamic environments.
+            </p>
+        </section>
 
-                <!-- Professional Skills -->
-                <div>
-                    <div class="section-title">Professional Skills</div>
-                    <div class="skills-grid">
-                        <div class="skill-item">Collaboration & Teamwork</div>
-                        <div class="skill-item">Leadership & Active Listening</div>
-                        <div class="skill-item">Critical Thinking & Problem Solving</div>
-                        <div class="skill-item">Effective Communication</div>
-                    </div>
+        <!-- Core Technical & Professional Skills -->
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-section">
+                <div class="skills-row">
+                    <span class="skills-category">Programming Languages & Concepts:</span> C, C++, Python, HTML, Data Structures
                 </div>
-
-                <!-- Languages -->
-                <div>
-                    <div class="section-title">Languages</div>
-                    <div class="language-item">
-                        <span>English</span>
-                        <span class="language-level">Fluent</span>
-                    </div>
-                    <div class="language-item">
-                        <span>Malayalam</span>
-                        <span class="language-level">Native</span>
-                    </div>
-                    <div class="language-item">
-                        <span>Hindi</span>
-                        <span class="language-level">Fluent</span>
-                    </div>
+                <div class="skills-row">
+                    <span class="skills-category">Frameworks & Tools:</span> React, Tailwind CSS, Flask REST API, MongoDB
                 </div>
-
-                <!-- NCC certificates -->
-                <div>
-                    <div class="section-title">NCC Credentials</div>
-                    <ul>
-                        <li>NCC Cadet</li>
-                        <li>Secured NCC 'A' Certificate (A Grade)</li>
-                        <li>Secured NCC 'B' Certificate (A Grade)</li>
-                        <li>Attended EBSB National Integration Camp (2019)</li>
-                    </ul>
+                <div class="skills-row">
+                    <span class="skills-category">Design & Media:</span> UI/UX (Figma), Canva, Adobe Express
+                </div>
+                <div class="skills-row">
+                    <span class="skills-category">Professional Competencies:</span> Collaboration, Active Listening, Leadership, Problem Solving, Communication, Critical Thinking
                 </div>
             </div>
+        </section>
 
-            <!-- Right Column: Profile, Education, Projects, Achievements -->
-            <div class="right-col">
-                <!-- Profile Summary -->
-                <div>
-                    <div class="section-title">Profile Summary</div>
-                    <p class="profile-summary-text">
-                        Motivated and adaptable B.Tech Computer Science and Engineering student at APJ Abdul Kalam Technological University with a strong academic foundation and a keen interest in technology. Possesses basic knowledge of programming languages such as C, C++, and Python, along with an understanding of fundamental computing concepts and a keen interest in UI/UX design. Recognized for leadership, teamwork, and proactive attitude as an active NCC cadet. Eager to learn, grow, and contribute meaningfully to dynamic software engineering and development environments.
-                    </p>
+        <!-- Technical Projects -->
+        <section>
+            <h2>Technical Projects</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Smart Pest Management System</span>
+                    <span class="timeline-date">2026</span>
                 </div>
-
-                <!-- Projects (Added information about this project) -->
-                <div>
-                    <div class="section-title">Academic & Technical Projects</div>
-                    <div class="project-item">
-                        <div class="project-title">
-                            <span>Smart Pest Management System</span>
-                            <span class="project-tech">React • Flask • PyTorch • MongoDB</span>
-                        </div>
-                        <p class="project-desc">
-                            Designed and developed an end-to-end full-stack web application designed to assist farmers, agricultural experts, and administrators in detecting plant diseases and recommending pesticide/organic treatment strategies.
-                        </p>
-                        <ul class="project-bullets">
-                            <li>Implemented an ensemble deep learning classifier integrating <strong>Swin Transformer</strong> (for contextual leaf structure) and <strong>EfficientNet-B0</strong> (for fine grain texture classification) in PyTorch to identify over 15 distinct crop diseases.</li>
-                            <li>Built a high-performance Flask REST API backend paired with a MongoDB database for user role management, forum posts, real-time message consulting, and treatment proposal pipelines.</li>
-                            <li>Created a responsive, interactive agricultural hub UI in React styled with custom CSS animations and robust dashboards tailored for Farmers, Admins, and Experts.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Education -->
-                <div>
-                    <div class="section-title">Education</div>
-                    <div class="education-timeline">
-                        <div class="edu-item">
-                            <div class="edu-header">
-                                <span class="edu-degree">B.Tech in Computer Science and Engineering</span>
-                                <span class="edu-year">2023 - Present</span>
-                            </div>
-                            <div class="edu-school">Mar Baselios Institute of Technology and Science (MBITS)</div>
-                            <div class="edu-grades">Under APJ Abdul Kalam Technological University (Ongoing)</div>
-                        </div>
-
-                        <div class="edu-item">
-                            <div class="edu-header">
-                                <span class="edu-degree">Higher Secondary Education (Plus Two)</span>
-                                <span class="edu-year">2021 - 2023</span>
-                            </div>
-                            <div class="edu-school">St. Mary's HSS Kaliyar</div>
-                            <div class="edu-grades">Grade: 93% | Directorate of Higher Secondary Education, Kerala</div>
-                        </div>
-
-                        <div class="edu-item">
-                            <div class="edu-header">
-                                <span class="edu-degree">Secondary School Leaving Certificate (SSLC)</span>
-                                <span class="edu-year">2021</span>
-                            </div>
-                            <div class="edu-school">St. Mary's HSS Kaliyar</div>
-                            <div class="edu-grades">Grade: 95% | State Board of General Education, Kerala</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Achievements -->
-                <div>
-                    <div class="section-title">Achievements</div>
-                    <div class="achievement-list">
-                        <div class="achievement-item">
-                            <span class="achievement-icon">★</span>
-                            <span>Secured 3rd Position in District-Level School Kalolsavam (Parichamuttu competition).</span>
-                        </div>
-                        <div class="achievement-item">
-                            <span class="achievement-icon">★</span>
-                            <span>Received the <strong>Nanmadura Certification</strong> for meritorious service rendered in the Chief Minister's Shield Competition.</span>
-                        </div>
-                        <div class="achievement-item">
-                            <span class="achievement-icon">★</span>
-                            <span>Active volunteer in Scouts & Guides (World's largest non-profit voluntary youth organization).</span>
-                        </div>
-                    </div>
-                </div>
+                <div class="timeline-sub">React, Flask REST API, PyTorch, MongoDB</div>
+                <p>
+                    Developed an end-to-end full-stack web application assisting farmers, agricultural experts, and administrators in detecting plant diseases and recommending pesticide/organic treatment strategies.
+                </p>
+                <ul class="project-details">
+                    <li>Implemented a PyTorch hybrid ensemble classifier using Swin Transformer and EfficientNet-B0 backbones to detect over 15 distinct crop leaf diseases from user image uploads.</li>
+                    <li>Built a Flask REST API backend integrated with MongoDB for role-based authentication, real-time message consulting, public forums, and medicine proposals.</li>
+                    <li>Designed and styled a responsive frontend in React with interactive statistics dashboards, advice calendars, and dynamic UI elements.</li>
+                </ul>
             </div>
-        </div>
+        </section>
+
+        <!-- Education Section -->
+        <section>
+            <h2>Education</h2>
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">B.Tech in Computer Science and Engineering</span>
+                    <span class="timeline-date">2023 - Present</span>
+                </div>
+                <div class="timeline-sub">Mar Baselios Institute of Technology and Science (MBITS) - APJ KTU</div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Higher Secondary Education (Plus Two)</span>
+                    <span class="timeline-date">2021 - 2023</span>
+                </div>
+                <div class="timeline-sub">St. Mary's HSS Kaliyar</div>
+                <p>Grade: 93% | Directorate of Higher Secondary Education, Kerala</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <span class="timeline-title">Secondary School Leaving Certificate (SSLC)</span>
+                    <span class="timeline-date">2021</span>
+                </div>
+                <div class="timeline-sub">St. Mary's HSS Kaliyar</div>
+                <p>Grade: 95% | State Board of General Education, Kerala</p>
+            </div>
+        </section>
+
+        <!-- NCC Credentials Section -->
+        <section>
+            <h2>NCC Credentials</h2>
+            <ul>
+                <li>Active NCC Cadet under Kerala & Lakshadweep Directorate.</li>
+                <li>Secured National Cadet Corps (NCC) 'A' Certificate with 'A' Grade.</li>
+                <li>Secured National Cadet Corps (NCC) 'B' Certificate with 'A' Grade.</li>
+                <li>Attended the National Integration Camp - NCC (EBSB - 2019).</li>
+            </ul>
+        </section>
+
+        <!-- Achievements Section -->
+        <section>
+            <h2>Achievements & Activities</h2>
+            <ul class="achievements-list">
+                <li>Secured Third Position in District-Level School Kalolsavam (Parichamuttu competition).</li>
+                <li>Received the Nanmadura Certification for meritorious service rendered in the Chief Minister's Shield Competition.</li>
+                <li>Active volunteer in Scouts & Guides (World's largest non-profit voluntary youth organization).</li>
+                <li>Fluent in multilingual communication: English (Fluent), Malayalam (Native), Hindi (Fluent).</li>
+            </ul>
+        </section>
     </div>
 </body>
 </html>
